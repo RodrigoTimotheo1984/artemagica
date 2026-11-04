@@ -8,7 +8,7 @@
 #          [--pecas revisao/medidas/pecas.json] [--folhas revisao/medidas/v03] [--saida revisao/medidas/v03.txt] [--meta 95]
 #
 #   --pecas   JSON em px do ALVO (direita e base exclusivas). Cada pedaço é uma caixa ou uma caixa com meta própria:
-#               {"selo": [20,18,800,684], "SUA CASA": {"caixa": [810,58,1490,200], "meta": 90}}
+#               {"selo": [20,18,800,684], "chamada": {"caixa": [810,58,1490,200], "meta": 90}}
 #             "total" é reservado (o quadro inteiro). Sem --pecas, mede só o total.
 #   --folhas  pasta: salva, por pedaço, alvo | montagem | diferença (ampliada 2x; preto = igual) para olhar.
 #   --saida   grava a mesma saída (com os avisos) num arquivo, além de imprimir.

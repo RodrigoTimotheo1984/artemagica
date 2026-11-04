@@ -1,0 +1,5 @@
+interface:
+  display_name: "Arte Mágica"
+  short_description: "Imagem ou briefing → PSD em camadas com 95% de semelhança, fácil de editar e de virar outro formato"
+policy:
+  allow_implicit_invocation: false

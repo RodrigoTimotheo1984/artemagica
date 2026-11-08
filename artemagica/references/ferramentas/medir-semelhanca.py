@@ -1,6 +1,6 @@
 # Régua da artemagica: semelhança estrutural (SSIM em blocos 8x8 por canal RGB) entre o alvo e a montagem,
 # no quadro inteiro e por pedaço. Converte a cor de cada arquivo para sRGB pelo perfil ICC embutido.
-# Fórmula usada num teste real de outdoor (11/2026), generalizada.
+# Fórmula usada num teste real (11/2026), generalizada.
 # NÃO TESTADO nesta versão: primeiro teste no Codex. Precisa de Pillow e NumPy.
 #
 # Uso (a partir da pasta do job):

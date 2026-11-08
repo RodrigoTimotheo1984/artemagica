@@ -5,9 +5,9 @@ Lido pela conversa principal depois do molde aprovado.
 ## Separar por objeto inteiro
 
 A unidade é **o que se move junto**, não cada coisa que se vê:
-- selo + pallet + presentes formam um expositor; dividir cada caixa destrói a sombra e esconde a base;
-- carrinho + compras dividem a mesma malha e a mesma perspectiva;
-- personagem sozinho, mas o que encosta nele (mão no guidão) precisa de um reparo próprio;
+- um expositor com os produtos em cima é um objeto só; dividir cada caixa destrói a sombra e esconde a base;
+- um objeto e o que está dentro dele (carrinho e compras, mesa e pratos) dividem a mesma perspectiva;
+- personagem sozinho, mas o que encosta nele (a mão segurando algo) precisa de um reparo próprio;
 - fundo e piso com a perspectiva e os reflexos deles.
 
 Escreva `pecas.md` com uma linha por elemento:
@@ -38,11 +38,11 @@ O gerador do Codex entrega um tamanho limitado: meça sempre no arquivo salvo. T
 1. Mostre ao usuário a lista inteira numa mensagem, com a sugestão de cada item. Ele aprova ou muda.
 2. Depois, **um asset por vez**:
    - gere com o recorte do molde como referência ("o mesmo elemento, mesma pose, luz e ângulo, isolado, alta resolução");
-   - confira a 100% antes de mostrar: mãos, grafia, nitidez, resolução real;
+   - olhe a 100%, ao lado do recorte do molde: mãos, grafia, nitidez, resolução real, se é mesmo o mesmo elemento. Ruim? Refaça antes de mostrar;
    - mostre ao lado do recorte do molde e pergunte: aprova ou refaço?
 3. Toda tentativa sai do recorte do molde + o pedido do usuário, nunca da tentativa anterior. Tentativas ficam em `assets/tentativas/`; os aprovados, recortados, em `assets/aprovados/`.
 4. Leia `cerebro/prompts.md` antes de escrever. O que funcionou ou falhou fica em `revisao/geracoes.md`; vai para o cérebro só na aula, com o "ok" do usuário.
 
-**Asset aprovado diferente do molde** (outro rosto, outra pose): gere uma vez o molde com ele, usando o molde e os assets como referência. Ele vira o próximo `molde/alvo-vNN.png` e passa pela aprovação do usuário. A régua e o olheiro medem cada pedaço, inclusive o interior do asset, contra esse alvo. Sem isso, a comparação fica injusta.
+**Asset aprovado diferente do molde** (outro rosto, outra pose): faça um alvo novo com ele. Primeiro tente no Photoshop, colando o asset no lugar dele sobre o molde, com luz e sombra integradas: assim o resto fica idêntico. Só gere a arte de novo se a colagem não convencer. O resultado vira o próximo `molde/alvo-vNN.png` e passa pela aprovação do usuário. A régua e o olheiro medem cada pedaço, inclusive o interior do asset, contra esse alvo. Sem isso, a comparação fica injusta.
 
 Toda geração vai para `revisao/geracoes.md`: arquivo, gerador, prompt, referências, tamanho real e custo.

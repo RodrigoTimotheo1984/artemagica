@@ -1,6 +1,6 @@
 # Professor e cérebro (artemagica)
 
-A skill aprende a cada KV. O que aprende fica no **cérebro**, `.agents/skills/artemagica/cerebro/`: arquivos de texto que o Codex lê e escreve e que o usuário consegue abrir. Lição errada se corrige apagando a linha.
+A skill aprende a cada KV. O que aprende fica no **cérebro**, `cerebro/`, dentro da pasta da skill: arquivos de texto que o Codex lê e escreve e que o usuário consegue abrir. Lição errada se corrige apagando a linha.
 
 ## O que tem no cérebro
 
@@ -22,7 +22,6 @@ Só depois do aceite explícito da peça. Um job não aceito não ensina "o que 
    - a conversa com o técnico: o que funcionou e o que **não** funcionou;
    - `mudancas.md` e o resultado dos testes do designer e de formato;
    - `revisao/geracoes.md` (prompts aprovados e recusados, com o motivo);
-   - `revisao/consumo.md`;
    - o que o usuário disse na conversa (a principal resume em até 10 linhas no pedido).
 2. Ele escreve uma **proposta de aula** em `revisao/aula.md`:
    - **no máximo ~5 lições**, as que mais vão ajudar no próximo KV;

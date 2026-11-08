@@ -1,10 +1,10 @@
 # Montar, conferir, testar e entregar
 
-Lido pela conversa principal e pelo montador. **Alvo:** o vigente (`SKILL.md`, "Aprovações"). São dicas: o que deu certo até hoje. Achou um caminho melhor, use-o e conte na aula.
+Lido pela conversa principal e pelo montador. **Alvo:** o vigente (`SKILL.md`, "Aprovações"). São dicas: o que deu certo até hoje. Achou um caminho melhor, use-o e conte na aula. A cada camada que entrar, exporte e olhe: não deixe para descobrir o problema só no fim.
 
 ## Montar fatiando o molde (o que mais deu certo)
 
-Copiar os pixels do molde chega muito mais perto do que remontar cada coisa. Num teste real, isso levou a região de um carrinho de compras de 58,3% para 96,1%.
+Copiar os pixels do molde chega muito mais perto do que remontar cada coisa. Num teste real, isso levou um elemento de 58% para 96%.
 
 1. **Documento** no tamanho do formato final, no perfil de cor do destino combinado (sem combinado: sRGB). Converta o perfil de tudo o que entrar. A régua sempre mede em sRGB, seja qual for o perfil do arquivo.
 2. **Fundo:**
@@ -21,7 +21,7 @@ Copiar os pixels do molde chega muito mais perto do que remontar cada coisa. Num
      - meça **letra por letra** (às vezes só a primeira letra é maior);
      - reserve o espaço entre as palavras;
    - material, volume e sombra como **estilo de camada na própria camada de texto**, **nunca** cópias soltas que não acompanham a troca de palavra (cópias de texto dentro de um objeto inteligente também não acompanham);
-   - brilho pontual (estrela na quina de uma letra) é uma camada própria por cima, no mesmo grupo da palavra, para mover junto. Trocou a palavra, confira se o brilho ainda cai numa letra.
+   - brilho pontual (um reflexo pequeno numa letra) é uma camada própria por cima, no mesmo grupo da palavra, para mover junto. Trocou a palavra, confira se o brilho ainda cai numa letra.
 5. **Efeitos de cena** (fumaça, névoa, brilho, cor geral): cada um numa camada própria, nomeada, com máscara.
 6. **Mudanças do usuário:** confira `mudancas.md` antes de cada volta.
 
@@ -29,7 +29,7 @@ Use as receitas do [cardápio](ferramentas/cardapio.md) e as técnicas do céreb
 
 ## Organização do PSD (para o designer)
 
-De baixo para cima, com nomes em português e até 30 itens no primeiro nível:
+De baixo para cima, com nomes em português e até ~30 itens no primeiro nível (menos é melhor, se tudo continuar fácil de achar):
 ```
 Fundo | molde + reparo escondido + ajustes de cor
 Pessoas e personagens | um objeto inteligente por pessoa
@@ -43,7 +43,7 @@ Antes de entregar, apague as provas, os grupos de tentativa e as camadas tempor�
 
 ## Voltas
 
-Monte → exporte a prova → **meça** com a régua → **olhe** lado a lado cada pedaço abaixo de 95 → corrija → repita.
+Monte → exporte a prova → **meça** com a régua → **olhe** a prova inteira e cada pedaço, ampliado, ao lado do alvo (os abaixo de 95 primeiro, mas todos) → pense no que mudar → corrija → repita.
 
 Rode a partir da **pasta do job**, com o Python que respondeu na conferência inicial da `SKILL.md` (troque `<alvo vigente>` por `molde/aprovado.png` ou pelo `molde/alvo-vNN.png` mais recente):
 ```powershell
@@ -53,7 +53,6 @@ New-Item -ItemType Directory -Force revisao/medidas | Out-Null
 - `pecas.json` tem as caixas de cada pedaço, em px do alvo: personagens, produtos, selo, **cada linha de texto**, piso e fundo. Pedaço do texto editável leva meta 90: `"chamada": {"caixa": [810,58,1490,200], "meta": 90}`.
 - A caixa de uma linha de texto pega também o fundo entre as letras: a nota dela não prova sozinha o desenho das letras. Confira as letras no olho, ampliado.
 - `INCONCLUSIVO` na saída (perfil de cor que não converteu, proporção diferente, caixa fora da imagem) não vale como nota: resolva antes.
-- Uma linha por volta em `revisao/consumo.md`: nota geral, pedaço mais baixo, tempo.
 - A régua não vê tudo. Confira também, no olho e ampliado, os itens de `cerebro/olho.md`: brilho pequeno, reflexo, sombra de contato, espaço entre palavras, fumaça e névoa.
 
 ## Conferir antes de mostrar
@@ -65,7 +64,7 @@ New-Item -ItemType Directory -Force revisao/medidas | Out-Null
    - aplica cada composição e exporta uma prova de cada.
 
    Abra as provas e olhe. Máscara toda branca pode ser de propósito: confira no olho.
-2. **Teste do designer**, numa cópia, sem salvar. Cronometre cada ação do começo ao fim (achar a camada, mudar, conferir) e anote o tempo e o que aconteceu:
+2. **Teste do designer**, numa cópia, sem salvar. Faça cada ação como um designer faria à mão e anote quantos passos levou e o que aconteceu:
    - troque uma palavra que tenha volume por outra **de tamanho diferente**; confira volume, sombra e brilho;
    - troque o preço;
    - mude a posição de um texto;
@@ -82,13 +81,13 @@ Mostre ao usuário:
 - o comparativo;
 - o caminho do PSD e da pasta dos assets principais separados (`assets/aprovados/` e recortes);
 - a tabela da entrega (abaixo);
-- o resultado dos testes do designer e de formato, com os tempos;
+- o resultado dos testes do designer e de formato;
 - uma nota curta: o que ficou aproximado, as mudanças dele e o tempo.
 
 **Tabela da entrega**, uma linha por pedaço em cada composição:
 ```
 | composição | pedaço | alvo usado | régua | olho | piso | bloqueios |
-| Arte | carrinho | alvo-v01.png | 96,1 | 95 | 95 | nenhum |
+| Arte | produto | alvo-v01.png | 96,1 | 95 | 95 | nenhum |
 | Editar texto | chamada | alvo-v01.png | 88,1 | 91 | 90 | nenhum |
 ```
 Grafia e espaço entre palavras entram na coluna de bloqueios. Abaixo do piso só passa se o usuário aceitar, e a exceção fica anotada.

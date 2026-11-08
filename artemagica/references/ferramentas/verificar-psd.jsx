@@ -90,7 +90,7 @@
             if (estado !== 'ok') alertas.push('mascara ' + estado.split(' (')[0].toLowerCase() + ': ' + lm.name);
         }
 
-        if (doc.layers.length > 30) alertas.push(doc.layers.length + ' itens no primeiro nivel (meta: ate 30)');
+        if (doc.layers.length > 30) alertas.push(doc.layers.length + ' itens no primeiro nivel (meta: ate ~30)');
         if (sobras.length) alertas.push(sobras.length + ' possiveis sobras: ' + sobras.join(' | '));
 
         var rel = 'PSD reaberto: ' + doc.name + '\n' + W + 'x' + H + ' px | perfil: ' + doc.colorProfileName +

@@ -7,7 +7,9 @@ description: Recriar uma arte (KV) no Photoshop em camadas editáveis, com 95% d
 
 Imagem (ou briefing) → **PSD em camadas igual à arte**, que um designer edita em minutos e que vira outro formato sem gerar nada.
 
-Este arquivo diz **o quê**, **até onde** e **o que é proibido**. O **como** está nas dicas de `references/`: você conhece o Photoshop, se vira. Travou? Pergunte ao técnico. **O resultado é o que importa:** se levar 2 horas, leva.
+Este arquivo diz **o quê**, **até onde** e **o que é proibido**. O **como** está nas dicas de `references/`: são ponto de partida, não receita. Você conhece o Photoshop: use o seu julgamento, e se achar um caminho melhor, use-o e conte na aula. Travou? Pergunte ao técnico. **O resultado é o que importa:** se levar 2 horas, leva.
+
+**Olhe sempre o que você fez.** Depois de cada passo (uma geração, um recorte, uma camada, uma volta), abra o resultado, inteiro e a 100%, ao lado do alvo, e pergunte: "o que está diferente, estranho ou com cara de montagem?". Ajuste e olhe de novo antes de seguir. Nada vai para o usuário sem você ter visto antes. Os números ajudam a achar o problema; quem decide se está bom é o seu olho.
 
 Fale simples com o usuário, sem jargão. `<skill>` é a pasta onde está este arquivo. Use-a com o caminho real.
 
@@ -30,13 +32,13 @@ Nada é 100%. O piso é **95%**.
   - espaço entre palavras e tamanho de cada letra iguais aos do molde, sem sumir nem crescer;
   - o PSD **abre igual à arte**, com o lettering do molde. Uma segunda composição de camadas, "Editar texto", traz o mesmo texto em fonte instalada parecida, com piso de **90%** no olho;
   - preço, data, condição e legal: sempre texto digitável.
-- **Teste do designer** (numa cópia, sem salvar, cronometrado do começo ao fim, incluindo achar a camada e conferir):
-  - até 30 itens no primeiro nível do painel, nomes em português e **nenhuma sobra** (nada de "Camada 1", provas ou grupos de tentativa);
-  - trocar uma palavra por outra **de tamanho diferente** muda junto o volume, a sombra e o brilho dela (num teste real, "UA" virou "OL" e o volume continuou "UA": isso reprova);
+- **Teste do designer** (numa cópia, sem salvar, cada ação feita como um designer faria à mão, do achar a camada ao conferir):
+  - painel enxuto: até ~30 itens no primeiro nível, nomes em português e **nenhuma sobra** (nada de "Camada 1", provas ou grupos de tentativa);
+  - trocar uma palavra por outra **de tamanho diferente** muda junto o volume, a sombra e o brilho dela (se a frente da letra muda e o volume continua com as letras antigas, reprova);
   - mover personagem ou produto leva junto a sombra e o reflexo, e o fundo atrás dele está inteiro;
-  - trocar preço, palavra e posição e mover um personagem em menos de 1 minuto. A arte não tem preço ou personagem? Anote "não se aplica"; não invente oferta.
+  - um designer troca preço, palavra e posição e move um personagem à mão em menos de 1 minuto: poucos cliques, camada fácil de achar pelo nome. A arte não tem preço ou personagem? Anote "não se aplica"; não invente oferta.
 - **Teste de formato:** virar o PSD em outro formato (ex.: 3600×2400 → 1080×1920) só movendo e escalando camadas, **sem gerar nada**.
-- **Resolução:** a do formato final, com detalhe de verdade a 100%. Caminhos em [pecas.md](references/pecas.md).
+- **Resolução:** a do formato final, com detalhe de verdade a 100%. Ampliar no Photoshop só se continuar nítido a 100% (fundo desfocado amplia bem; rosto, mão, letra e logo, quase nunca). Caminhos em [pecas.md](references/pecas.md).
 
 Ficou abaixo do piso e não sobe mais? Mostre ao usuário o melhor resultado, com as notas e o que faltou. Quem decide é ele; se ele aceitar, anote a exceção com as notas reais.
 
@@ -44,10 +46,13 @@ Ficou abaixo do piso e não sobe mais? Mostre ao usuário o melhor resultado, co
 
 Explícitas e uma a uma. Mostre, pergunte e **pare**:
 1. o molde (a imagem que vai ser copiada);
-2. cada asset que precisar ser gerado em alta, um por vez;
-3. a entrega.
+2. a lista de peças (o que vem do molde e o que será gerado);
+3. cada asset gerado em alta, um por vez;
+4. a entrega.
 
-**Mudança pedida pelo usuário** (ex.: "sem o brilho em volta do carrinho") vira um **alvo novo e separado** (`molde/alvo-v01.png`, depois `alvo-v02.png`…, nunca por cima do anterior) e uma linha em `mudancas.md`, com as palavras dele e o alvo que ela gerou. Ninguém "corrige" de volta. **Alvo vigente** = o `alvo-vNN.png` mais recente; sem nenhum, `molde/aprovado.png`.
+Entre uma aprovação e outra, trabalhe sozinho: veja, ajuste e reveja quantas vezes precisar.
+
+**Mudança pedida pelo usuário** (ex.: tirar um efeito, mudar uma cor, trocar um elemento) vira um **alvo novo e separado** (`molde/alvo-v01.png`, depois `alvo-v02.png`…, nunca por cima do anterior) e uma linha em `mudancas.md`, com as palavras dele e o alvo que ela gerou. Ninguém "corrige" de volta. **Alvo vigente** = o `alvo-vNN.png` mais recente; sem nenhum, `molde/aprovado.png`.
 
 ## O caminho (dicas)
 
@@ -79,9 +84,9 @@ Use o **mesmo técnico** o job inteiro, continuando a conversa com ele. Como con
 - **Photoshop**, por script (COM), com todas as ferramentas; **Illustrator** se estiver instalado. Recurso generativo da Adobe que gaste crédito pago: pergunte antes.
 - **Em [references/ferramentas/](references/ferramentas/):**
   - `medir-semelhanca.py`: a régua;
-  - `verificar-psd.jsx`: reabre o PSD salvo, confere máscaras, composições e sobras;
   - `medir.ps1`: texto, cor e fonte;
   - `receitas.jsx` + [cardapio.md](references/ferramentas/cardapio.md);
+  - `verificar-psd.jsx`: reabre o PSD salvo, confere máscaras, composições e sobras;
   - `prova-fontes.jsx`, `recortar.jsx`, `remendo.ps1`, `comparar-grade.ps1`.
 - **Pesquisa na web** para técnica de Photoshop.
 
@@ -103,7 +108,7 @@ $ps.DoJavaScriptFile('<pasta do job>\montar\montar.jsx')
   montar/            scripts do PSD
   editaveis/         <slug>-<formato>-vNN.psd
   exportacoes/       <slug>-<formato>-vNN.png e comparativo-vNN.png
-  revisao/           medidas/, provas/, olheiro-final-vNN.md, geracoes.md, consumo.md
+  revisao/           medidas/, provas/, olheiro-final-vNN.md, geracoes.md
 ```
 Nunca sobrescreva versão mostrada nem original. Guarde cada medição com o nome da versão (`revisao/medidas/vNN.txt`).
 

@@ -34,10 +34,10 @@ Você recebe só caminhos:
 Escreva `revisao/olheiro-final-vNN.md`:
 ```
 NOTA GERAL: 93
-PEDAÇOS: selo 96 | personagem 95 | carrinho 92 (falta reflexo no piso) | chamada 94 | ...
+PEDAÇOS: selo 96 | personagem 95 | produto 92 (falta reflexo no piso) | chamada 94 | ...
 BLOQUEIOS: nenhum
 FALTAS (as que mais pesam primeiro):
-  1. carrinho | reflexo no piso | falta | invertido, ~25%, some em ~60 px
+  1. produto | reflexo no piso | falta | invertido, ~25%, some em ~60 px
 PRONTO: não
 ```
 `PRONTO: sim` só com geral e cada pedaço ≥ 95 (o texto da composição "Editar texto" ≥ 90) e nenhum bloqueio. Com faltas, o ciclo volta para a montagem. Um olheiro novo olha de novo depois.

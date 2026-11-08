@@ -6,7 +6,7 @@
 // - aplica cada composicao de camadas e exporta uma prova em sRGB de cada, para abrir e olhar;
 // - grava o relatorio em revisao/verificado-<psd>.txt e fecha sem salvar.
 (function () {
-    var PSD = '<pasta do job>/editaveis/<slug>-<formato>-vNN.psd';
+    var PSD = '<pasta do job>/editaveis/<slug>-<formato>.psd';
     var file = new File(PSD), mode = app.displayDialogs;
     if (!file.exists) throw new Error('PSD inexistente: ' + PSD);
     for (var i = 0; i < app.documents.length; i++) {

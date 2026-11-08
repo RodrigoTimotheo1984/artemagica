@@ -100,5 +100,5 @@ Ajuste pedido muda **só** o que ele pediu; o resto fica idêntico. Depois do ac
 
 - ExtendScript em UTF-8 **com BOM**, `displayDialogs = DialogModes.NO` restaurado no `finally`.
 - Documento RGB com o perfil incorporado; PSD com camadas; PNG com perfil.
-- Não sobrescreva PSD ou PNG já mostrado. Fonte ausente é erro, nunca troca silenciosa.
+- PSD: salve por cima o de trabalho; antes, se a versão já foi mostrada, guarde a `-anterior.psd` (regra em `SKILL.md`, "Pastas do job"). PNG de versão mostrada nunca é sobrescrito. Fonte ausente é erro, nunca troca silenciosa.
 - Antes de usar `getByName` ou duplicar, confira qual documento está ativo.

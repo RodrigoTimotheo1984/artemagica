@@ -106,11 +106,11 @@ $ps.DoJavaScriptFile('<pasta do job>\montar\montar.jsx')
   pecas.md           elementos, decisão e tamanho final
   assets/            aprovados/ e tentativas/
   montar/            scripts do PSD
-  editaveis/         <slug>-<formato>-vNN.psd
+  editaveis/         <slug>-<formato>.psd (o de trabalho) e <slug>-<formato>-anterior.psd
   exportacoes/       <slug>-<formato>-vNN.png e comparativo-vNN.png
   revisao/           medidas/, provas/, olheiro-final-vNN.md, geracoes.md
 ```
-Nunca sobrescreva versão mostrada nem original. Guarde cada medição com o nome da versão (`revisao/medidas/vNN.txt`).
+**Cópias do PSD:** um PSD de trabalho por formato, salvo por cima a cada ajuste. Antes de mexer numa versão que o usuário já viu, guarde a cópia dela como `-anterior.psd` (só uma; a mais antiga é apagada), para ele poder dizer "volta como estava". Cada versão mostrada vira um PNG leve em `exportacoes/` (`vNN`), e esses ficam. No aceite, fica só o PSD aprovado e a cópia anterior é apagada. O histórico do Photoshop some ao fechar o arquivo: não conte com ele. O original do usuário nunca é alterado. Guarde cada medição com o nome da versão (`revisao/medidas/vNN.txt`).
 
 ## Edições sem manchas
 
@@ -134,7 +134,7 @@ Cada edição de imagem redesenha tudo e acumula erro, como xerox de xerox:
 - Entregar sem reabrir o PSD salvo, ligar as duas composições e abrir o comparativo final inteiro.
 - Criar ou instalar fonte; mexer no registro, na segurança ou na configuração do Windows; instalar programa ou contratar serviço sem autorização.
 - Logo que não parece o oficial, borrado ou com grafia errada; rótulo ou produto real gerado por IA; inventar cor de marca, slogan, oferta ou condição comercial.
-- Achatar camadas, deixar sobra escondida no PSD, sobrescrever versão ou original, trocar fonte sem avisar.
+- Achatar camadas, deixar sobra escondida no PSD, alterar o original do usuário, apagar o PNG de uma versão mostrada, trocar fonte sem avisar.
 - Escrever, corrigir ou apagar qualquer coisa no cérebro (lição, técnica, prompt) sem o "ok" do usuário. Durante o job, anote no próprio job; o cérebro só muda na aula.
 - Ficar em loop:
   - 3 voltas sem a nota de um pedaço subir: mude a abordagem, não os números;

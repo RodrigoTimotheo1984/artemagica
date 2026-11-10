@@ -1,6 +1,6 @@
 # Arte Mágica
 
-Skill do Codex que pega uma arte pronta (ou um briefing) e faz um **PSD de verdade, em camadas e em alta**, que lembra a arte, como um diretor de arte faria a partir de uma referência. Fica fácil de editar e pronto para virar outros formatos.
+Skill do Codex que pega uma arte pronta e faz um **PSD de verdade, em camadas**, que lembra a arte, como um diretor de arte faria a partir de uma referência. Fica fácil de editar e pronto para virar outros formatos.
 
 ## O que você precisa
 
@@ -41,12 +41,12 @@ Na primeira vez, o Codex pode pedir permissão para controlar o Photoshop. É s�
 
 Você só manda a arte. Ela trabalha sozinha e volta com a peça pronta.
 
-1. **Plano:** ela olha a arte como um diretor de arte e decide o caminho de cada elemento: gerar de novo em alta, fazer um fundo novo, criar a letra, aproveitar a própria arte ou deixar o texto digitável. Um crítico (outro diretor de arte) e um instrutor de Photoshop, independentes, discutem o plano com ela antes de qualquer ferramenta.
-2. **Assets:** antes de cada parte difícil, ela pesquisa e pergunta ao instrutor como se faz. O crítico aprova os principais antes da montagem.
-3. **Montagem:** ela monta o PSD com o fundo inteiro, cada elemento separado com a sombra dele e os textos que mudam digitáveis.
+1. **Plano:** ela olha a arte como um diretor de arte, anota o que precisa sobreviver (composição, hierarquia, cores, luz, letras) e decide o caminho de cada elemento: gerar de novo, fazer um fundo novo, criar a letra, aproveitar a própria arte ou deixar o texto digitável.
+2. **Prova cedo:** antes de caprichar, ela monta uma prova rápida e testa o mais difícil: move o elemento, troca o preço, encaixa em outro formato. Se não funcionar, troca o caminho ali mesmo, sem jogar trabalho fora no fim.
+3. **Produção:** quando tem dúvida de como fazer, pergunta a um instrutor de Photoshop independente; quando o caminho é caro, a um crítico (outro diretor de arte). O que ela já sabe fazer, faz direto.
 4. **Testes:** ela troca uma palavra, move os elementos e vira o PSD em outro formato, para provar que dá para editar.
-5. **Entrega:** um revisor novo confere tudo, e você recebe o PSD, o comparativo e o que faltou, se faltou algo.
-6. **Aula:** depois do seu aceite, ela propõe o que aprendeu. Só guarda com o seu "ok", e a próxima arte já começa sabendo.
+5. **Entrega:** um revisor novo confere tudo, e você recebe um PSD só (bonito e editável ao mesmo tempo), o comparativo, o tamanho real de cada parte e o que faltou, se faltou algo.
+6. **Aula:** depois, ela propõe o que aprendeu. Só guarda com o seu "ok", e a próxima arte já começa sabendo.
 
 ## O que significam as notas
 
@@ -56,7 +56,8 @@ Você só manda a arte. Ela trabalha sozinha e volta com a peça pronta.
 
 ## Bom saber
 
-- Ela mira em **cerca de 30 minutos** por arte. Só para antes do fim se faltar algo que não dá para inventar (texto da oferta, logo oficial, foto de produto) ou se precisar gastar ou instalar algo.
+- Ela mira em **cerca de 30 minutos** por arte (é meta, não promessa; ela conta na entrega quanto levou).
+- **Tamanho:** o que você pedir. Sem pedido, cerca de 3000 px no lado maior; 2500 px já é aceitável. Ela não estica a imagem só para ficar maior. Só para antes do fim se faltar algo que não dá para inventar (texto da oferta, logo oficial, foto de produto) ou se precisar gastar ou instalar algo.
 - O logo e o manual da marca são com você: mande os arquivos oficiais junto.
 - O gerador do Codex tem limite de tamanho. Para peças muito grandes, como um outdoor, ela tenta caminhos no próprio Photoshop e avisa se a imagem não ficar nítida no tamanho final.
 - O conferidor do PSD (`verificar-psd.jsx`) é novo. Se der erro, o Codex pode corrigir e seguir.

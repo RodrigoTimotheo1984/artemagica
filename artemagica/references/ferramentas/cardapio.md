@@ -13,15 +13,15 @@ A camada nova nasce logo acima da camada ativa: antes de chamar a receita, ative
 | Receita | O que faz | Quando usar (o que a referência mostra) | De onde vêm os números |
 |---|---|---|---|
 | `R.textoMolde` | Linha de texto editável encaixada na caixa da referência, pela largura (padrão) ou pela altura | Toda chamada ou texto que exista na referência | `medir.ps1 texto` (caixas) + `prova-fontes` (fonte) |
-| `R.estilo` | Sombra suave, brilho externo e interno, contorno: um estilo completo | Sombra ou brilho nas letras. **Contorno só se a referência tiver** | Cor: `medir.ps1 cor` (sombras/fundo). Tamanho: voltas |
+| `R.estilo` | Sombra suave, brilho externo e interno, contorno: um estilo completo (substitui o anterior). Chanfro, gradiente e textura não estão aqui: faça no estilo, com o instrutor | Sombra ou brilho nas letras. **Contorno só se a referência tiver** | Cor: `medir.ps1 cor` (sombras/fundo). Tamanho: voltas |
 | `R.nuvem` | Mancha oval de cor com borda muito suave | Fundo mais escuro ou mais liso atrás de uma chamada; foco de luz | Cor: `medir.ps1 cor` → **fundo**. Centro e tamanho: caixa do texto + folga |
 | `R.nevoaProfundidade` | Degradê de cor que some de cima para baixo (ou o contrário) | Fundo distante mais claro, quente e sem contraste ("ar" da cena) | Cor: `medir.ps1 cor` → luzes da área do fundo. Força: `nitidez` do recorte |
 | `R.sombraContato` | Oval escura e achatada, em Multiplicar | Objeto ou pessoa apoiados (carrinho, produto, pés) | Cor: sombras da referência perto do apoio |
 | `R.casarCor` | Tinge um elemento com a cor da cena (camada presa a ele) | Pessoa ou objeto gerado que chegou com outra cor e "parece colado" | Cor: `medir.ps1 cor` da área da referência onde o elemento está |
-| `R.halo` | Brilho suave em volta de um objeto | Selo, luz ou produto com brilho em volta na referência | Cor: luzes da referência perto do objeto |
+| `R.halo` | Brilho suave em volta de um objeto. **Substitui o estilo inteiro da camada:** se ela já tem sombra ou contorno, use `R.estilo` com tudo junto | Selo, luz ou produto com brilho em volta na referência | Cor: luzes da referência perto do objeto |
 | `R.desfocar` | Desfoque gaussiano como filtro inteligente | Elemento que na referência está fora de foco | `nitidez` do recorte acima de 1 |
-| `R.vinheta` | Bordas mais escuras (sempre no topo) | Molde com cantos mais escuros | Força: brilho dos cantos (grade) |
-| `R.exportarProva` | Exporta o PNG para conferir | Toda volta | — |
+| `R.vinheta` | Bordas mais escuras (sempre no topo) | Referência com cantos mais escuros | Força: brilho dos cantos (grade) |
+| `R.exportarProva` | Exporta o PNG para conferir | Nos marcos (prova, fundo, elementos, textos) | — |
 
 ## Ferramentas de medida ([medir.ps1](medir.ps1), ~1 s, sem abrir imagem)
 

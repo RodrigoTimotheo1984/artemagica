@@ -1,11 +1,11 @@
-# Régua da artemagica: semelhança estrutural (SSIM em blocos 8x8 por canal RGB) entre o alvo e a montagem,
+# Régua OPCIONAL da artemagica (aponta onde a peça se afastou; não é a nota): semelhança estrutural (SSIM em blocos 8x8 por canal RGB) entre o alvo e a montagem,
 # no quadro inteiro e por pedaço. Converte a cor de cada arquivo para sRGB pelo perfil ICC embutido.
 # Fórmula usada num teste real (11/2026), generalizada.
 # NÃO TESTADO nesta versão: primeiro teste no Codex. Precisa de Pillow e NumPy.
 #
 # Uso (a partir da pasta do job):
 #   python <skill>/references/ferramentas/medir-semelhanca.py --molde <alvo vigente> --montagem revisao/provas/v03.png
-#          [--pecas revisao/medidas/pecas.json] [--folhas revisao/medidas/v03] [--saida revisao/medidas/v03.txt] [--meta 95]
+#          [--pecas revisao/medidas/pecas.json] [--folhas revisao/medidas/v03] [--saida revisao/medidas/v03.txt] [--meta N, opcional]
 #
 #   --pecas   JSON em px do ALVO (direita e base exclusivas). Cada pedaço é uma caixa ou uma caixa com meta própria:
 #               {"selo": [20,18,800,684], "chamada": {"caixa": [810,58,1490,200], "meta": 90}}
@@ -85,7 +85,7 @@ def main():
     p.add_argument('--pecas')
     p.add_argument('--folhas')
     p.add_argument('--saida')
-    p.add_argument('--meta', type=float, default=95)
+    p.add_argument('--meta', type=float, default=None)  # opcional: sem meta, só mostra os números
     a = p.parse_args()
 
     alvo = ler(a.molde)
@@ -118,10 +118,13 @@ def main():
                 continue
             ca, cb = alvo.crop((l, t, r, d)), mont.crop((l, t, r, d))
             n = nota(ca, cb)
-            ok = n >= meta
-            if not ok:
-                abaixo.append(nome)
-            dizer(f'{nome:<20} {n:6.2f}  meta {meta:g}  {"ok" if ok else "ABAIXO"}')
+            if meta is None:
+                dizer(f'{nome:<20} {n:6.2f}')
+            else:
+                ok = n >= meta
+                if not ok:
+                    abaixo.append(nome)
+                dizer(f'{nome:<20} {n:6.2f}  meta {meta:g}  {"atinge" if ok else "abaixo"}')
             if a.folhas and nome != 'total':
                 folha(ca, cb, os.path.join(a.folhas, f'{nome}.png'))
 
@@ -130,7 +133,7 @@ def main():
     if inconclusivo:
         dizer('RESULTADO: INCONCLUSIVO (a nota não vale)')
     else:
-        dizer('RESULTADO: ' + ('ok' if not abaixo else 'ABAIXO em ' + ', '.join(abaixo)))
+        dizer('Só aponta onde a peça se afastou da referência; não é a nota. Quem julga é o olho.' + ('' if not abaixo else ' Abaixo da meta pedida: ' + ', '.join(abaixo)))
     if a.saida:
         os.makedirs(os.path.dirname(os.path.abspath(a.saida)), exist_ok=True)
         with open(a.saida, 'w', encoding='utf-8') as f:

@@ -3,7 +3,7 @@
 // - recusa rodar se o PSD ja estiver aberto (feche, ou rode numa copia);
 // - conta os itens do primeiro nivel e o total, e aponta sobras ("Camada 1", prova, teste, temporaria...);
 // - acha mascara toda preta (esconde a camada inteira) ou toda branca (nao recorta nada);
-// - aplica cada composicao de camadas e exporta uma prova em sRGB de cada, para abrir e olhar;
+// - exporta uma prova em sRGB do estado salvo (e de cada composicao, se houver: a skill pede um estado so);
 // - grava o relatorio em revisao/verificado-<psd>.txt e fecha sem salvar.
 (function () {
     var PSD = '<pasta do job>/editaveis/<slug>-<formato>.psd';
@@ -50,9 +50,9 @@
             app.activeDocument = doc;
             return out.fsName;
         }
-        if (doc.layerComps.length === 0) {
-            alertas.push('sem composicoes de camadas (a skill pede "Arte" e "Editar texto")');
-            comps.push('(estado salvo) -> ' + exportar('estado-salvo'));
+        comps.push('(estado salvo) -> ' + exportar('estado-salvo'));
+        if (doc.layerComps.length > 0) {
+            alertas.push('tem composicoes de camadas: a skill pede um estado so, bonito e editavel; confira se o estado salvo e o entregue');
         }
         for (var p = 0; p < doc.layerComps.length; p++) {
             var comp = doc.layerComps[p];

@@ -54,6 +54,10 @@ Entre uma aprovação e outra, trabalhe sozinho: veja, ajuste e reveja quantas v
 
 **Mudança pedida pelo usuário** (ex.: tirar um efeito, mudar uma cor, trocar um elemento) vira um **alvo novo e separado** (`molde/alvo-v01.png`, depois `alvo-v02.png`…, nunca por cima do anterior) e uma linha em `mudancas.md`, com as palavras dele e o alvo que ela gerou. Ninguém "corrige" de volta. **Alvo vigente** = o `alvo-vNN.png` mais recente; sem nenhum, `molde/aprovado.png`.
 
+**Pedido de ferramenta ou de tamanho não muda o alvo.** "Faz em 3D", "maior resolução", "fundo do zero" dizem **como** fazer, não **como deve ficar**: o alvo e o piso continuam os mesmos. Só vira alvo novo quando o usuário pede para a arte ficar diferente. Na dúvida, pergunte a ele.
+
+**Nunca troque o que está igual por algo pior.** Uma peça refeita (em 3D, fundo novo, ampliada) só entra no lugar dos pixels do molde na composição "Arte" se ficar igual ou melhor, medida e olhada lado a lado. Ficou pior? Ela entra como alternativa editável, numa composição própria, e a "Arte" continua com os pixels do molde. Antes de refazer em alta, prove num tamanho pequeno que chega lá.
+
 ## O caminho (dicas)
 
 | Passo | Leia |

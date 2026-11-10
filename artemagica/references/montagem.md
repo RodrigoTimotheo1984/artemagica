@@ -77,8 +77,8 @@ New-Item -ItemType Directory -Force revisao/medidas | Out-Null
 
 ## Entrega
 
-Mostre ao usuário:
-- o comparativo;
+Mostre ao usuário, nesta ordem:
+- primeiro o comparativo lado a lado, antes de qualquer frase sobre o resultado;
 - o caminho do PSD e da pasta dos assets principais separados (`assets/aprovados/` e recortes);
 - a tabela da entrega (abaixo);
 - o resultado dos testes do designer e de formato;
@@ -92,7 +92,7 @@ Mostre ao usuário:
 ```
 Grafia e espaço entre palavras entram na coluna de bloqueios. Abaixo do piso só passa se o usuário aceitar, e a exceção fica anotada.
 
-Status: `revisado para avaliação` até o aceite; `aprovado` só depois dele.
+Status: `revisado para avaliação` até o aceite; `aprovado` só depois dele. Com qualquer pedaço abaixo do piso, nunca diga "pronto": diga em palavras o que ficou pior que o alvo e onde.
 
 Ajuste pedido muda **só** o que ele pediu; o resto fica idêntico. Depois do aceite, chame o professor.
 

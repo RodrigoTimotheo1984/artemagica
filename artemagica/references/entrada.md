@@ -1,6 +1,6 @@
 # Entrada (a referência) e geração de assets
 
-Lido pela conversa principal. Duas portas de entrada; as duas terminam numa **referência aprovada** em `referencia/aprovada.png`, que vai junto com o plano para o usuário.
+Lido pela conversa principal. Duas portas de entrada; as duas terminam numa **referência aprovada** em `referencia/aprovada.png`, base do plano.
 
 ## Porta A — imagem pronta
 
@@ -11,7 +11,7 @@ O usuário manda uma imagem (um KV, uma arte de referência, um layout que ele g
    - o texto, letra por letra;
    - se há logo ou marca.
    Texto errado ou logo diferente do oficial **não** pedem nova geração da arte inteira: o plano resolve isso nos assets e na montagem.
-3. Formato final: pergunte junto com o plano, se não for óbvio (`kv` 3600×2400, `stories` 1080×1920 ou outro).
+3. Formato final: o que o usuário disser. Se ele não disser, use a proporção da referência no tamanho do formato da campanha mais parecido (`kv` 3600×2400, `stories` 1080×1920) e conte na entrega.
 
 ## Porta B — briefing
 
@@ -34,7 +34,7 @@ Antes de gerar um elemento difícil, pesquise e pergunte ao instrutor de Photosh
 - Gere o elemento **sozinho, ocupando o quadro inteiro**: ele sai com muito mais pixels do que tinha dentro da arte. Mande o recorte da referência como guia ("o mesmo elemento, mesma pose, luz e ângulo, isolado, fundo liso, alta resolução").
 - **Fundo novo:** gere a cena vazia, na mesma luz, cor e perspectiva, sem os elementos na frente. Ele vira a camada de baixo inteira; nada fica com buraco.
 - **Lettering do título:** gere a palavra sozinha, no mesmo estilo e material. Grafia letra por letra.
-- Toda tentativa sai do recorte da referência + o pedido do usuário, nunca da tentativa anterior. Tentativas em `assets/tentativas/`; aprovados, recortados, em `assets/aprovados/`.
+- Toda tentativa sai do recorte da referência + o plano, nunca da tentativa anterior. Tentativas em `assets/tentativas/`; aprovados, recortados, em `assets/aprovados/`.
 - Produto real e rótulo nunca são gerados: peça a foto ou o arquivo oficial ao usuário. Preço, data, condição e legal viram texto digitável.
 - Olhe a 100%, ao lado do recorte da referência: grafia, mãos, nitidez, resolução real, se lembra o elemento original. Ruim? Refaça antes de mostrar.
 - Ainda pequeno? Amplie no Photoshop (Preservar Detalhes) só se continuar nítido a 100%: fundo desfocado amplia bem; rosto, mão, letra e logo, quase nunca. Ainda não chega? Mostre o melhor a 100% ao usuário e diga o maior tamanho em que fica bom; não contrate outro serviço.

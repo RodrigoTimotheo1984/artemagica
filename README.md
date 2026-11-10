@@ -39,8 +39,10 @@ Na primeira vez, o Codex pode pedir permissão para controlar o Photoshop. É s�
 
 ## Como ela trabalha
 
-1. **Plano:** ela olha a arte como um diretor de arte e decide o caminho de cada elemento: gerar de novo em alta, fazer um fundo novo, criar a letra, aproveitar a própria arte ou deixar o texto digitável. Um instrutor de Photoshop independente revisa o plano. Você aprova antes de ela abrir qualquer ferramenta.
-2. **Assets:** antes de cada parte difícil, ela pesquisa e pergunta ao instrutor como se faz. Depois gera e mostra os principais juntos, lado a lado com a arte. Você aprova.
+Você só manda a arte. Ela trabalha sozinha e volta com a peça pronta.
+
+1. **Plano:** ela olha a arte como um diretor de arte e decide o caminho de cada elemento: gerar de novo em alta, fazer um fundo novo, criar a letra, aproveitar a própria arte ou deixar o texto digitável. Um crítico (outro diretor de arte) e um instrutor de Photoshop, independentes, discutem o plano com ela antes de qualquer ferramenta.
+2. **Assets:** antes de cada parte difícil, ela pesquisa e pergunta ao instrutor como se faz. O crítico aprova os principais antes da montagem.
 3. **Montagem:** ela monta o PSD com o fundo inteiro, cada elemento separado com a sombra dele e os textos que mudam digitáveis.
 4. **Testes:** ela troca uma palavra, move os elementos e vira o PSD em outro formato, para provar que dá para editar.
 5. **Entrega:** um revisor novo confere tudo, e você recebe o PSD, o comparativo e o que faltou, se faltou algo.
@@ -54,7 +56,7 @@ Na primeira vez, o Codex pode pedir permissão para controlar o Photoshop. É s�
 
 ## Bom saber
 
-- Ela mira em **cerca de 30 minutos** por arte e avisa se o plano precisar de mais.
+- Ela mira em **cerca de 30 minutos** por arte. Só para antes do fim se faltar algo que não dá para inventar (texto da oferta, logo oficial, foto de produto) ou se precisar gastar ou instalar algo.
 - O logo e o manual da marca são com você: mande os arquivos oficiais junto.
 - O gerador do Codex tem limite de tamanho. Para peças muito grandes, como um outdoor, ela tenta caminhos no próprio Photoshop e avisa se a imagem não ficar nítida no tamanho final.
 - O conferidor do PSD (`verificar-psd.jsx`) é novo. Se der erro, o Codex pode corrigir e seguir.

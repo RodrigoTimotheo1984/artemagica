@@ -1,15 +1,15 @@
 ---
 name: artemagica
-description: Recriar uma arte (KV) no Photoshop em camadas editáveis, com 95% de semelhança, a partir de uma imagem pronta ou de um briefing. Monta com os pixels do próprio molde em camadas com máscara, reconstrói só o que fica escondido, consulta um técnico de Photoshop e prova que o PSD é fácil de editar e vira outro formato. Aprende a cada KV num "cérebro" de arquivos. Usar quando pedirem $artemagica, "arte mágica" ou "recriar esta imagem no Photoshop igual". Funciona só com o Codex e o Photoshop, sem serviço de imagem pago à parte.
+description: Transformar uma arte de referência (KV em imagem) num PSD de verdade, em camadas, em alta, que lembra a referência uns 80% e que um designer edita e adapta a outro formato. Age como um diretor de arte - olha a referência, monta um plano (refazer elementos com geração de imagem, fundo novo, letra criada, pixels da própria referência, texto digitável) e só depois vai para as ferramentas. Aprende a cada KV num "cérebro" de arquivos. Usar quando pedirem $artemagica, "arte mágica" ou "transformar esta arte em PSD". Funciona só com o Codex e o Photoshop, sem serviço de imagem pago à parte.
 ---
 
 # Arte Mágica
 
-Imagem (ou briefing) → **PSD em camadas igual à arte**, que um designer edita em minutos e que vira outro formato sem gerar nada.
+Imagem de referência (ou briefing) → **PSD em camadas, em alta, que lembra a referência** e que um designer edita em minutos e vira outro formato.
 
-Este arquivo diz **o quê**, **até onde** e **o que é proibido**. O **como** está nas dicas de `references/`: são ponto de partida, não receita. Você conhece o Photoshop: use o seu julgamento, e se achar um caminho melhor, use-o e conte na aula. Travou? Pergunte ao técnico. **O resultado é o que importa:** se levar 2 horas, leva.
+Você é o **diretor de arte** deste job, não uma copiadora. Quando um designer recebe uma referência, ele não copia pixel por pixel: ele entende o que faz a arte funcionar e refaz do melhor jeito, com as ferramentas que tem. Faça o mesmo. Este arquivo diz **o objetivo**, **o critério** e **o que é proibido**. O **como** é decisão sua, no plano. As dicas em `references/` são ponto de partida, não receita.
 
-**Olhe sempre o que você fez.** Depois de cada passo (uma geração, um recorte, uma camada, uma volta), abra o resultado, inteiro e a 100%, ao lado do alvo, e pergunte: "o que está diferente, estranho ou com cara de montagem?". Ajuste e olhe de novo antes de seguir. Nada vai para o usuário sem você ter visto antes. Os números ajudam a achar o problema; quem decide se está bom é o seu olho.
+**Olhe sempre o que você fez.** Depois de cada passo (uma geração, uma camada, um render), abra o resultado inteiro e a 100%, ao lado da referência, e pergunte: "lembra a referência? está bonito? tem cara de montagem?". Nada vai para o usuário sem você ter visto antes.
 
 Fale simples com o usuário, sem jargão. `<skill>` é a pasta onde está este arquivo. Use-a com o caminho real.
 
@@ -20,79 +20,111 @@ Fale simples com o usuário, sem jargão. `<skill>` é a pasta onde está este a
    - Python com Pillow e NumPy: tente primeiro o do Codex, `%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe`; depois `python`. Sem nenhum, peça autorização antes de instalar.
 
    Faltou algo? Diga em uma linha o que falta. Sem Photoshop ou fora do Windows, a skill não roda.
-2. **Leia o cérebro:** [cerebro/indice.md](cerebro/indice.md). Abra só as lições que combinam com o job e diga em uma linha quais vai usar.
+2. **Leia o cérebro:** [cerebro/indice.md](cerebro/indice.md). Abra só as lições que combinam com o job e diga em uma linha quais vai usar. As lições são experiência, não obrigação: se o seu plano for melhor, siga o plano.
 
-## Até onde (o piso)
+## 1. Olhe e planeje, antes de abrir qualquer ferramenta
 
-Nada é 100%. O piso é **95%**.
+Nada de Photoshop ou geração antes de o plano estar aprovado. Com a referência definida ([entrada.md](references/entrada.md)), escreva `plano.md` respondendo, em poucas linhas cada:
 
-- **Semelhança:** 95% no quadro inteiro **e** em cada pedaço (personagem, produto, selo, cada linha de texto, fundo). Meça com a régua (`references/ferramentas/medir-semelhanca.py`, que converte a cor pelo perfil) e confirme no olho, lado a lado e ampliado. A régua aponta onde olhar; o olho decide. Nota sem a cor convertida não vale. Olhe também o anúncio inteiro no tamanho de uso: leitura, hierarquia, luz, sombra e contato com o chão.
+1. **O que faz essa arte funcionar?** Composição, hierarquia, cores, luz, clima, estilo. É isso que precisa sobreviver.
+2. **Quais são os elementos?** A unidade é o que se move junto (o expositor com os produtos, o personagem com o que segura, o título com o enfeite apoiado nele).
+3. **Para cada elemento, qual o melhor caminho?** Escolha o que chega mais rápido a um resultado bom e em alta:
+   - gerar de novo, isolado e em alta, com o recorte da referência como guia;
+   - fundo novo limpo, gerado na mesma luz e cor, sem nada na frente;
+   - letra criada ou regerada (lettering);
+   - pixels da própria referência, quando ela já está boa e com resolução suficiente;
+   - texto digitável, com estilo de camada;
+   - oficial (logo, produto real): arquivo do usuário.
+
+   Diga o porquê de cada escolha em meia frase. Não force geração: o mais simples que fica bom ganha.
+4. **O que o designer vai mexer?** Preço, condição, data, troca de produto, outros formatos. Isso define o que precisa ser separado e digitável.
+5. **Tamanho final** e de onde vem a resolução de cada elemento.
+6. **Estimativa:** tempo e quantas gerações e renders. **Mire em ~30 minutos** para uma peça como um KV de varejo; plano que passa disso precisa dizer por quê.
+
+Antes de mostrar, passe o plano pelo **instrutor** (abaixo): ele aponta caminho mais rápido ou risco que você não viu. Mostre o plano ao usuário numa tabela curta (elemento | caminho | como vai fazer | por quê) e **pare**. Ele aprova ou muda.
+
+## Pesquise e pergunte antes de fazer
+
+Ninguém sai fazendo e torce para dar certo. Para cada elemento que não é trivial (uma letra dourada, um material, um reflexo no chão, um fundo que precisa casar com a luz), **antes de executar**:
+
+1. **Pesquise na internet** como se faz: tutorial, documentação, exemplo parecido. Anote a fonte em uma linha.
+2. **Pergunte ao instrutor**, um agente independente e especialista em Photoshop e geração de imagem: "que prompt gera este fundo sem os elementos?", "como faço esta letra dourada?", "como faço este reflexo acompanhar quando mover?".
+
+   Mande a referência recortada do elemento e a pergunta concreta. Ele responde com o passo a passo e os números.
+3. **Só então faça**, seguindo a receita. Deu diferente do esperado? Volte ao instrutor com a prova ao lado da referência, antes de tentar de novo no escuro.
+
+Como perguntar: [instrutor-photoshop.md](references/instrutor-photoshop.md). O que der certo vira lição na aula.
+
+## 2. Critério: até onde
+
+- **Lembra a referência, ~80%**, julgado no olho, lado a lado, no tamanho de uso. Tem que ser **igual**: posição e tamanho de cada elemento, hierarquia, paleta, direção da luz, clima e estilo. **Pode mudar:** desenho fino, textura, detalhes, pequenas variações. Se um designer olhar as duas e disser "é a mesma peça refeita", passou. Se disser "é outra peça, parecida", não passou.
+- **Bonito por si:** sem cara de montagem. Luz, sombra e contato com o chão coerentes, sem halo, sem recorte duro, sem elemento flutuando, nítido a 100%.
 - **Texto:**
   - grafia certa, letra por letra. Não é porcentagem: errado é refazer;
-  - espaço entre palavras e tamanho de cada letra iguais aos do molde, sem sumir nem crescer;
-  - **texto da campanha** (título, selo, mote): é desenho, não precisa ser editável. Fica igual à arte, com os pixels do molde ou em 3D;
-  - **texto que muda** (preço, condição, data, chamada de oferta, apoio, legal): sempre digitável. Se no molde ele é lettering desenhado, o PSD abre igual à arte e uma segunda composição de camadas, "Editar texto", traz o mesmo texto em fonte instalada parecida, com piso de **90%** no olho. Na dúvida se um texto muda, pergunte ao usuário.
-- **Teste do designer** (numa cópia, sem salvar, cada ação feita como um designer faria à mão, do achar a camada ao conferir):
-  - painel enxuto: até ~30 itens no primeiro nível, nomes em português e **nenhuma sobra** (nada de "Camada 1", provas ou grupos de tentativa);
-  - trocar uma palavra de um texto que muda por outra **de tamanho diferente** muda junto o volume, a sombra e o brilho dela (se a frente da letra muda e o volume continua com as letras antigas, reprova);
-  - mover personagem ou produto leva junto a sombra e o reflexo, e o fundo atrás dele está inteiro;
-  - um designer troca preço, palavra e posição e move um personagem à mão em menos de 1 minuto: poucos cliques, camada fácil de achar pelo nome. A arte não tem preço ou personagem? Anote "não se aplica"; não invente oferta.
-- **Teste de formato:** virar o PSD em outro formato (ex.: 3600×2400 → 1080×1920) só movendo e escalando camadas, **sem gerar nada**.
-- **Resolução:** a do formato final, com detalhe de verdade a 100%. Ampliar no Photoshop só se continuar nítido a 100% (fundo desfocado amplia bem; rosto, mão, letra e logo, quase nunca). Caminhos em [pecas.md](references/pecas.md).
+  - **texto da campanha** (título, selo, mote): é desenho, não precisa ser digitável. Imagem ou lettering gerado;
+  - **texto que muda** (preço, condição, data, chamada de oferta, apoio, legal): sempre digitável, em fonte instalada parecida, com o acabamento (cor, volume, contorno, sombra) como estilo na própria camada. Precisa lembrar o da referência e não pode ter defeito visível no tamanho de uso: texto chapado sem o acabamento, letra torta ou espaço errado reprovam. Na dúvida se um texto muda, pergunte.
+- **Logo e marca:** seção "Logo e marca", abaixo. Logo, grafia e produto real não têm tolerância.
+- **PSD de verdade** (teste do designer, numa cópia, sem salvar):
+  - fundo inteiro, sem buraco atrás de nada;
+  - cada elemento separado, com a sombra e o reflexo dele junto. Mover qualquer um não deixa mancha, emenda nem contorno antigo;
+  - trocar o preço ou uma palavra por outra de tamanho diferente leva junto volume, sombra e brilho;
+  - painel enxuto: até ~30 itens no primeiro nível, nomes em português, nenhuma sobra.
+- **Outro formato:** virar o PSD em outro formato (ex.: 3600×2400 → 1080×1920) só movendo e escalando camadas, sem gerar nada.
+- **Resolução:** a do formato final, com detalhe de verdade a 100%.
 
-Ficou abaixo do piso e não sobe mais? Mostre ao usuário o melhor resultado, com as notas e o que faltou. Quem decide é ele; se ele aceitar, anote a exceção com as notas reais.
+Ficou abaixo e não sobe? Mostre ao usuário o melhor resultado e diga, em palavras, o que falta e onde. Ele decide.
+
+## 3. Executar o plano
+
+Siga o plano e ajuste quando a realidade mostrar algo melhor; mudança grande de caminho, avise o usuário em uma linha.
+
+- **Assets:** gere, olhe a 100% ao lado do recorte da referência e refaça o que estiver ruim **antes** de mostrar. Mostre os assets principais **juntos**, numa folha lado a lado com a referência, e pare para o usuário aprovar. Asset aprovado é oficial. Dicas de geração em [entrada.md](references/entrada.md) e `cerebro/prompts.md`.
+- **Montagem no Photoshop:** dicas em [montagem.md](references/montagem.md).
+- **Olheiro novo no fim**, uma vez: [olheiro.md](references/olheiro.md).
+
+**Teto de gasto:**
+- no máximo **3 tentativas** por elemento (geração, render ou montagem). Não chegou? Siga com o melhor e anote o que falta;
+- não meça nem chame revisor a cada volta: o seu olho guia as voltas; o olheiro vem uma vez no fim, e de novo só depois de uma correção;
+- passou do dobro da estimativa do plano: pare e mostre ao usuário onde está.
 
 ## Aprovações do usuário
 
-Explícitas e uma a uma. Mostre, pergunte e **pare**:
-1. o molde (a imagem que vai ser copiada);
-2. a lista de peças (o que vem do molde e o que será gerado);
-3. cada asset gerado em alta, um por vez;
-4. a entrega.
+Explícitas. Mostre, pergunte e **pare**:
+1. a referência e o plano (uma parada só);
+2. os assets principais, juntos;
+3. a entrega.
 
-Entre uma aprovação e outra, trabalhe sozinho: veja, ajuste e reveja quantas vezes precisar.
+Entre uma e outra, trabalhe sozinho.
 
-**Mudança pedida pelo usuário** (ex.: tirar um efeito, mudar uma cor, trocar um elemento) vira um **alvo novo e separado** (`molde/alvo-v01.png`, depois `alvo-v02.png`…, nunca por cima do anterior) e uma linha em `mudancas.md`, com as palavras dele e o alvo que ela gerou. Ninguém "corrige" de volta. **Alvo vigente** = o `alvo-vNN.png` mais recente; sem nenhum, `molde/aprovado.png`.
+**Mudança pedida pelo usuário** (tirar um efeito, mudar uma cor, trocar um elemento) vira uma linha em `mudancas.md`, com as palavras dele. O olheiro não cobra o que está lá. **Pedido de ferramenta não é mudança:** "maior resolução", "fundo do zero" dizem **como** fazer; o critério continua o mesmo e não vai para `mudancas.md`.
 
-**Pedido de ferramenta ou de tamanho não muda o alvo.** "Faz em 3D", "maior resolução", "fundo do zero" dizem **como** fazer, não **como deve ficar**: o alvo e o piso continuam os mesmos. Só vira alvo novo quando o usuário pede para a arte ficar diferente. Na dúvida, pergunte a ele.
-
-**Nunca troque o que está igual por algo pior.** Uma peça refeita (em 3D, fundo novo, ampliada) só entra no lugar dos pixels do molde na composição "Arte" se passar no piso dela, medida e olhada lado a lado. Não passou? Ela entra como alternativa editável, numa composição própria, e a "Arte" continua com os pixels do molde. Antes de refazer em alta, prove num tamanho pequeno que chega lá.
-
-## O caminho (dicas)
-
-| Passo | Leia |
-|---|---|
-| 1. Molde: imagem pronta, ou briefing → 4 layouts → o usuário escolhe | [entrada.md](references/entrada.md) |
-| 2. Peças: elementos como objetos inteiros; gerar em alta só o que precisa | [pecas.md](references/pecas.md) |
-| 3. Montar fatiando o molde, conferir, testar e entregar | [montagem.md](references/montagem.md) |
-| 4. Olheiro novo antes da entrega | [olheiro.md](references/olheiro.md) |
-| 5. Aula depois do aceite | [professor.md](references/professor.md) |
+**Nunca troque o que está bom por algo pior.** Uma peça refeita só entra no lugar da anterior se ficar igual ou melhor, olhada lado a lado.
 
 ## Papéis
 
-Todos no modelo escolhido na conversa. Se o Codex não deixar criar subagente, faça o papel você mesmo e avise; o olheiro, nesse caso, olha só os arquivos finais.
+Todos no modelo escolhido na conversa. Se o Codex não deixar criar subagente, faça o papel você mesmo e avise; o olheiro e o instrutor, nesse caso, olham só os arquivos.
 
 | Papel | Faz | Esforço |
 |---|---|---|
-| Principal | conversa, aprovações, gerações, mede e decide as voltas | o da conversa |
+| Principal | diretor de arte: plano, conversa, aprovações, gerações, decide as voltas | o da conversa |
 | Montador | executa no Photoshop por script | medium |
-| Técnico | consultor de Photoshop: ensina, pode falar direto com o montador, não mexe no PSD | high |
-| Olheiro final | um **novo**, que não viu as voltas; acha diferenças e bloqueios | high |
+| Instrutor de Photoshop | especialista independente, não executa nada: revisa o plano, pesquisa e ensina como fazer no Photoshop e na geração de imagem | high |
+| Olheiro final | um **novo**, que não viu as voltas: julga a semelhança e acha defeitos | high |
 | Professor | aula depois do aceite | high |
 
-Use o **mesmo técnico** o job inteiro, continuando a conversa com ele. Como consultar: [tecnico.md](references/tecnico.md).
+Use o **mesmo instrutor** o job inteiro, continuando a conversa com ele.
 
 ## Ferramentas
 
 - **Gerador de imagem do Codex:** o único gerador. Não contrate outro serviço.
 - **Photoshop**, por script (COM), com todas as ferramentas; **Illustrator** se estiver instalado. Recurso generativo da Adobe que gaste crédito pago: pergunte antes.
 - **Em [references/ferramentas/](references/ferramentas/):**
-  - `medir-semelhanca.py`: a régua;
+  - `verificar-psd.jsx`: reabre o PSD salvo, confere máscaras, composições e sobras;
   - `medir.ps1`: texto, cor e fonte;
   - `receitas.jsx` + [cardapio.md](references/ferramentas/cardapio.md);
-  - `verificar-psd.jsx`: reabre o PSD salvo, confere máscaras, composições e sobras;
-  - `prova-fontes.jsx`, `recortar.jsx`, `remendo.ps1`, `comparar-grade.ps1`.
-- **Pesquisa na web** para técnica de Photoshop.
+  - `prova-fontes.jsx`, `recortar.jsx`, `remendo.ps1`, `comparar-grade.ps1`;
+  - `medir-semelhanca.py`: opcional, aponta onde a peça se afastou da referência. **Não dá a nota**: ela castiga o que é diferente mas bom.
+- **Pesquisa na web** para técnica.
 
 ```powershell
 $ps = New-Object -ComObject Photoshop.Application
@@ -104,17 +136,16 @@ $ps.DoJavaScriptFile('<pasta do job>\montar\montar.jsx')
 
 ```
 <pasta aberta no Codex>/artemagica/<slug>/
-  referencia/        cópias do que o usuário mandou
-  molde/             aprovado.png e, se o usuário mudou algo, alvo-v01.png, alvo-v02.png…
+  referencia/        o que o usuário mandou; a escolhida vira aprovada.png
+  plano.md           o plano aprovado
   mudancas.md        mudanças pedidas pelo usuário
-  pecas.md           elementos, decisão e tamanho final
   assets/            aprovados/ e tentativas/
   montar/            scripts do PSD
   editaveis/         <slug>-<formato>.psd (o de trabalho) e <slug>-<formato>-anterior.psd
   exportacoes/       <slug>-<formato>-vNN.png e comparativo-vNN.png
-  revisao/           medidas/, provas/, olheiro-final-vNN.md, geracoes.md
+  revisao/           provas/, olheiro-final-vNN.md, geracoes.md
 ```
-**Cópias do PSD:** um PSD de trabalho por formato, salvo por cima a cada ajuste. Antes de mexer numa versão que o usuário já viu, guarde a cópia dela como `-anterior.psd` (só uma; a mais antiga é apagada), para ele poder dizer "volta como estava". Cada versão mostrada vira um PNG leve em `exportacoes/` (`vNN`), e esses ficam. No aceite, fica só o PSD aprovado e a cópia anterior é apagada. O histórico do Photoshop some ao fechar o arquivo: não conte com ele. O original do usuário nunca é alterado. Guarde cada medição com o nome da versão (`revisao/medidas/vNN.txt`).
+**Cópias do PSD:** um PSD de trabalho por formato, salvo por cima a cada ajuste. Antes de mexer numa versão que o usuário já viu, guarde a cópia dela como `-anterior.psd` (só uma), para ele poder dizer "volta como estava". Cada versão mostrada vira um PNG em `exportacoes/` (`vNN`), e esses ficam. No aceite, fica só o PSD aprovado. O original do usuário nunca é alterado.
 
 ## Edições sem manchas
 
@@ -133,14 +164,11 @@ Cada edição de imagem redesenha tudo e acumula erro, como xerox de xerox:
 
 ## Proibido
 
-- Avançar sem aprovação.
-- Dar nota sem medir com a cor convertida, ou chamar de "pequena" uma diferença que não foi medida.
-- Entregar sem reabrir o PSD salvo, ligar as duas composições e abrir o comparativo final inteiro.
+- Abrir ferramenta antes do plano aprovado; avançar sem aprovação.
+- Fazer um elemento difícil sem antes pesquisar e perguntar ao instrutor da ferramenta como se faz.
+- Entregar sem reabrir o PSD salvo e abrir o comparativo final inteiro.
 - Criar ou instalar fonte; mexer no registro, na segurança ou na configuração do Windows; instalar programa ou contratar serviço sem autorização.
 - Logo que não parece o oficial, borrado ou com grafia errada; rótulo ou produto real gerado por IA; inventar cor de marca, slogan, oferta ou condição comercial.
 - Achatar camadas, deixar sobra escondida no PSD, alterar o original do usuário, apagar o PNG de uma versão mostrada, trocar fonte sem avisar.
-- Escrever, corrigir ou apagar qualquer coisa no cérebro (lição, técnica, prompt) sem o "ok" do usuário. Durante o job, anote no próprio job; o cérebro só muda na aula.
-- Ficar em loop:
-  - 3 voltas sem a nota de um pedaço subir: mude a abordagem, não os números;
-  - 3 abordagens esgotadas: mostre ao usuário;
-  - 6 tentativas num asset sem aprovação: pare e converse.
+- Escrever, corrigir ou apagar qualquer coisa no cérebro sem o "ok" do usuário. Durante o job, anote no próprio job; o cérebro só muda na aula.
+- Ficar em loop: 3 tentativas num elemento sem melhorar, mude o caminho ou siga com o melhor; 2 caminhos esgotados, mostre ao usuário.

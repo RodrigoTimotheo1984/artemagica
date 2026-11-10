@@ -9,8 +9,8 @@ A skill aprende a cada KV. O que aprende fica no **cérebro**, `cerebro/`, dentr
 | `indice.md` | Uma linha por lição ou técnica, com etiquetas e o caminho. **Lido no começo de todo job** | todos |
 | `licoes.md` | Lições gerais: o que funciona, o que o usuário recusa e por quê, decisões de processo | principal, olheiro |
 | `olho.md` | Checklist do olheiro: o que já passou batido ou mais apareceu como falta. Ordem = o mais esquecido primeiro | olheiro |
-| `tecnicas/<nome>.md` | Uma técnica de Photoshop por arquivo: passo a passo com números, quando usar, de quais jobs veio; antes/depois em `tecnicas/img/` | técnico, montador |
-| `prompts.md` | Prompts de geração que deram certo e errado, por tipo (layout, fundo, personagem, objeto, lettering, molde final), e o tamanho real de cada gerador | principal |
+| `tecnicas/<nome>.md` | Uma técnica de Photoshop por arquivo: passo a passo com números, quando usar, de quais jobs veio; antes/depois em `tecnicas/img/` | instrutores, montador |
+| `prompts.md` | Prompts de geração que deram certo e errado, por tipo (layout, fundo, personagem, objeto, lettering), e o tamanho real de cada gerador | principal |
 | `historico.md` | Uma linha por KV: data, job, nota final, voltas, tempo, gerações, créditos, o que o usuário disse | principal |
 
 ## A aula (depois do aceite do usuário)
@@ -19,13 +19,13 @@ Só depois do aceite explícito da peça. Um job não aceito não ensina "o que 
 
 1. O professor (subagente) lê o que o job deixou:
    - `revisao/medidas/` (a régua de cada volta) e `revisao/olheiro-final-*.md`;
-   - a conversa com o técnico: o que funcionou e o que **não** funcionou;
+   - as conversas com os instrutores: o que funcionou e o que **não** funcionou;
    - `mudancas.md` e o resultado dos testes do designer e de formato;
    - `revisao/geracoes.md` (prompts aprovados e recusados, com o motivo);
    - o que o usuário disse na conversa (a principal resume em até 10 linhas no pedido).
 2. Ele escreve uma **proposta de aula** em `revisao/aula.md`:
    - **no máximo ~5 lições**, as que mais vão ajudar no próximo KV;
-   - **técnicas novas:** cada pedaço que levou 2 voltas ou mais e chegou nos 95 vira `tecnicas/<nome>.md`, se não existir parecida; se existir, a técnica é melhorada com os números novos;
+   - **técnicas novas:** cada pedaço que levou 2 tentativas ou mais e ficou bom vira `tecnicas/<nome>.md`, se não existir parecida; se existir, a técnica é melhorada com os números novos;
    - itens para o `olho.md`: o que a régua não pegou e só o olho achou (do olheiro final ou do usuário);
    - prompts para o `prompts.md`: os aprovados de primeira e os que falharam, com o porquê;
    - a linha do `historico.md`.

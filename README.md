@@ -1,6 +1,6 @@
 # Arte Mágica
 
-Skill do Codex que transforma uma arte pronta (ou um briefing) em um **PSD em camadas**, o mais igual possível à arte, fácil de editar e pronto para virar outros formatos.
+Skill do Codex que pega uma arte pronta (ou um briefing) e faz um **PSD de verdade, em camadas e em alta**, que lembra a arte, como um diretor de arte faria a partir de uma referência. Fica fácil de editar e pronto para virar outros formatos.
 
 ## O que você precisa
 
@@ -39,26 +39,23 @@ Na primeira vez, o Codex pode pedir permissão para controlar o Photoshop. É s�
 
 ## Como ela trabalha
 
-1. **Molde:** a sua arte vira o modelo a ser copiado. Você aprova.
-2. **Peças:** ela separa os elementos (fundo, pessoas, produtos, selo, textos) e gera em alta só o que precisa. Você aprova cada peça gerada.
-3. **Montagem:** ela usa os pixels da própria arte em camadas com máscara e reconstrói o fundo que fica escondido atrás dos elementos. Mede, olha, corrige e repete.
-4. **Testes:** ela troca uma palavra, move um personagem e vira o PSD em outro formato, para provar que dá para editar.
-5. **Entrega:** um revisor novo confere tudo, e você recebe o PSD, o PNG, o comparativo e as notas.
+1. **Plano:** ela olha a arte como um diretor de arte e decide o caminho de cada elemento: gerar de novo em alta, fazer um fundo novo, criar a letra, aproveitar a própria arte ou deixar o texto digitável. Um instrutor de Photoshop independente revisa o plano. Você aprova antes de ela abrir qualquer ferramenta.
+2. **Assets:** antes de cada parte difícil, ela pesquisa e pergunta ao instrutor como se faz. Depois gera e mostra os principais juntos, lado a lado com a arte. Você aprova.
+3. **Montagem:** ela monta o PSD com o fundo inteiro, cada elemento separado com a sombra dele e os textos que mudam digitáveis.
+4. **Testes:** ela troca uma palavra, move os elementos e vira o PSD em outro formato, para provar que dá para editar.
+5. **Entrega:** um revisor novo confere tudo, e você recebe o PSD, o comparativo e o que faltou, se faltou algo.
 6. **Aula:** depois do seu aceite, ela propõe o que aprendeu. Só guarda com o seu "ok", e a próxima arte já começa sabendo.
 
 ## O que significam as notas
 
-- **95%** é o mínimo de semelhança, no geral e em cada pedaço. Nada é 100%.
-- **90%** é o mínimo do texto editável, porque nenhuma fonte instalada é idêntica a um lettering desenhado.
-- **A grafia** não tem porcentagem: está certa ou está errada.
-- A régua aponta onde olhar. **Quem decide é o olho**, e a palavra final é sua. Se algo não chegar ao mínimo, ela mostra o melhor resultado e você decide.
-
-O PSD abre **igual à arte**. Para mexer nas palavras, escolha **Editar texto** no painel Composições de camadas.
+- **80%** de semelhança, no olho: posição, tamanho, cores, luz e estilo iguais; detalhes podem mudar. É o que você espera de um designer a quem mandou uma referência.
+- **A grafia, o logo e o produto real** não têm porcentagem: estão certos ou errados.
+- A palavra final é sua. Se algo não chegar lá, ela mostra o melhor resultado e você decide.
 
 ## Bom saber
 
-- Pode levar **cerca de 1 a 2 horas** por arte. Deixe rodar.
+- Ela mira em **cerca de 30 minutos** por arte e avisa se o plano precisar de mais.
 - O logo e o manual da marca são com você: mande os arquivos oficiais junto.
 - O gerador do Codex tem limite de tamanho. Para peças muito grandes, como um outdoor, ela tenta caminhos no próprio Photoshop e avisa se a imagem não ficar nítida no tamanho final.
-- A régua e o conferidor do PSD (`medir-semelhanca.py` e `verificar-psd.jsx`) são novos. Se derem erro, o Codex pode corrigir e seguir.
+- O conferidor do PSD (`verificar-psd.jsx`) é novo. Se der erro, o Codex pode corrigir e seguir.
 - O que ela aprende fica na pasta da skill, no seu computador. Antes de reinstalar, guarde uma cópia da pasta `cerebro`.

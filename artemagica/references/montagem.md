@@ -15,7 +15,7 @@ Copiar os pixels do molde chega muito mais perto do que remontar cada coisa. Num
    - cada um é uma cópia do molde do **tamanho da tela inteira**, no mesmo lugar, com máscara no contorno do objeto (incluindo a sombra e o reflexo dele). Nunca reposicione pelos limites do recorte;
    - asset gerado em alta entra no mesmo lugar, alinhado por cima;
    - depois, cada elemento vira **objeto inteligente**.
-4. **Texto, duas composições de camadas:**
+4. **Texto.** Título, selo e mote da campanha ficam como na arte (pixels do molde ou 3D) e não ganham versão editável. Para os textos que mudam e são lettering desenhado no molde, duas composições de camadas:
    - **"Arte"** (a que abre): o lettering do molde, com máscara nas letras, o brilho e a sombra junto, e o fundo reparado embaixo;
    - **"Editar texto"**: fonte instalada parecida (prova de fontes, escolha no olho). Antes de fechar a largura de cada linha:
      - meça **letra por letra** (às vezes só a primeira letra é maior);
@@ -65,7 +65,7 @@ New-Item -ItemType Directory -Force revisao/medidas | Out-Null
 
    Abra as provas e olhe. Máscara toda branca pode ser de propósito: confira no olho.
 2. **Teste do designer**, numa cópia, sem salvar. Faça cada ação como um designer faria à mão e anote quantos passos levou e o que aconteceu:
-   - troque uma palavra que tenha volume por outra **de tamanho diferente**; confira volume, sombra e brilho;
+   - troque uma palavra de um texto que muda por outra **de tamanho diferente**; confira volume, sombra e brilho;
    - troque o preço;
    - mude a posição de um texto;
    - mova um personagem e olhe o fundo atrás dele, as bordas e onde ele encostava.

@@ -30,11 +30,11 @@ Nada é 100%. O piso é **95%**.
 - **Texto:**
   - grafia certa, letra por letra. Não é porcentagem: errado é refazer;
   - espaço entre palavras e tamanho de cada letra iguais aos do molde, sem sumir nem crescer;
-  - o PSD **abre igual à arte**, com o lettering do molde. Uma segunda composição de camadas, "Editar texto", traz o mesmo texto em fonte instalada parecida, com piso de **90%** no olho;
-  - preço, data, condição e legal: sempre texto digitável.
+  - **texto da campanha** (título, selo, mote): é desenho, não precisa ser editável. Fica igual à arte, com os pixels do molde ou em 3D;
+  - **texto que muda** (preço, condição, data, chamada de oferta, apoio, legal): sempre digitável. Se no molde ele é lettering desenhado, o PSD abre igual à arte e uma segunda composição de camadas, "Editar texto", traz o mesmo texto em fonte instalada parecida, com piso de **90%** no olho. Na dúvida se um texto muda, pergunte ao usuário.
 - **Teste do designer** (numa cópia, sem salvar, cada ação feita como um designer faria à mão, do achar a camada ao conferir):
   - painel enxuto: até ~30 itens no primeiro nível, nomes em português e **nenhuma sobra** (nada de "Camada 1", provas ou grupos de tentativa);
-  - trocar uma palavra por outra **de tamanho diferente** muda junto o volume, a sombra e o brilho dela (se a frente da letra muda e o volume continua com as letras antigas, reprova);
+  - trocar uma palavra de um texto que muda por outra **de tamanho diferente** muda junto o volume, a sombra e o brilho dela (se a frente da letra muda e o volume continua com as letras antigas, reprova);
   - mover personagem ou produto leva junto a sombra e o reflexo, e o fundo atrás dele está inteiro;
   - um designer troca preço, palavra e posição e move um personagem à mão em menos de 1 minuto: poucos cliques, camada fácil de achar pelo nome. A arte não tem preço ou personagem? Anote "não se aplica"; não invente oferta.
 - **Teste de formato:** virar o PSD em outro formato (ex.: 3600×2400 → 1080×1920) só movendo e escalando camadas, **sem gerar nada**.
@@ -56,7 +56,7 @@ Entre uma aprovação e outra, trabalhe sozinho: veja, ajuste e reveja quantas v
 
 **Pedido de ferramenta ou de tamanho não muda o alvo.** "Faz em 3D", "maior resolução", "fundo do zero" dizem **como** fazer, não **como deve ficar**: o alvo e o piso continuam os mesmos. Só vira alvo novo quando o usuário pede para a arte ficar diferente. Na dúvida, pergunte a ele.
 
-**Nunca troque o que está igual por algo pior.** Uma peça refeita (em 3D, fundo novo, ampliada) só entra no lugar dos pixels do molde na composição "Arte" se ficar igual ou melhor, medida e olhada lado a lado. Ficou pior? Ela entra como alternativa editável, numa composição própria, e a "Arte" continua com os pixels do molde. Antes de refazer em alta, prove num tamanho pequeno que chega lá.
+**Nunca troque o que está igual por algo pior.** Uma peça refeita (em 3D, fundo novo, ampliada) só entra no lugar dos pixels do molde na composição "Arte" se passar no piso dela, medida e olhada lado a lado. Não passou? Ela entra como alternativa editável, numa composição própria, e a "Arte" continua com os pixels do molde. Antes de refazer em alta, prove num tamanho pequeno que chega lá.
 
 ## O caminho (dicas)
 
@@ -86,6 +86,8 @@ Use o **mesmo técnico** o job inteiro, continuando a conversa com ele. Como con
 
 - **Gerador de imagem do Codex:** o único gerador. Não contrate outro serviço.
 - **Photoshop**, por script (COM), com todas as ferramentas; **Illustrator** se estiver instalado. Recurso generativo da Adobe que gaste crédito pago: pergunte antes.
+  - **Piso do render: 90%**, comparado com a mesma área do molde, medido e olhado lado a lado. Trabalhe em voltas até chegar: prove num tamanho pequeno antes de renderizar em alta. Enquanto não chega, a "Arte" usa os pixels do molde e o usuário vê a evolução, não uma entrega. Não chegou depois de 3 abordagens diferentes? Mostre o melhor e o que falta.
+  - Pode usar modelo 3D pronto baixado da internet (qualquer objeto da cena): pesquise **até 3 opções** parecidas com o molde e mostre ao usuário (imagem de cada uma e o link) **antes de usar**. Ele escolhe; o escolhido pode ser adaptado. É layout; o que vai para produção é decisão do usuário. Abra o `.blend` baixado sem rodar os scripts dele. Modelo diferente do molde vira alvo novo, aprovado pelo usuário.
 - **Em [references/ferramentas/](references/ferramentas/):**
   - `medir-semelhanca.py`: a régua;
   - `medir.ps1`: texto, cor e fonte;

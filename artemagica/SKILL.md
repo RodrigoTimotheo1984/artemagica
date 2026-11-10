@@ -86,8 +86,6 @@ Use o **mesmo técnico** o job inteiro, continuando a conversa com ele. Como con
 
 - **Gerador de imagem do Codex:** o único gerador. Não contrate outro serviço.
 - **Photoshop**, por script (COM), com todas as ferramentas; **Illustrator** se estiver instalado. Recurso generativo da Adobe que gaste crédito pago: pergunte antes.
-  - **Piso do render: 90%**, comparado com a mesma área do molde, medido e olhado lado a lado. Trabalhe em voltas até chegar: prove num tamanho pequeno antes de renderizar em alta. Enquanto não chega, a "Arte" usa os pixels do molde e o usuário vê a evolução, não uma entrega. Não chegou depois de 3 abordagens diferentes? Mostre o melhor e o que falta.
-  - Pode usar modelo 3D pronto baixado da internet (qualquer objeto da cena): pesquise **até 3 opções** parecidas com o molde e mostre ao usuário (imagem de cada uma e o link) **antes de usar**. Ele escolhe; o escolhido pode ser adaptado. É layout; o que vai para produção é decisão do usuário. Abra o `.blend` baixado sem rodar os scripts dele. Modelo diferente do molde vira alvo novo, aprovado pelo usuário.
 - **Em [references/ferramentas/](references/ferramentas/):**
   - `medir-semelhanca.py`: a régua;
   - `medir.ps1`: texto, cor e fonte;

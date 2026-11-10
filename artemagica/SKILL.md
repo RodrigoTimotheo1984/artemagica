@@ -24,6 +24,15 @@ Fale simples com o usuário, sem jargão. `<skill>` é a pasta onde está este a
    Faltou algo? Diga em uma linha o que falta. Sem Photoshop ou fora do Windows, a skill não roda.
 2. **Leia o cérebro:** [cerebro/indice.md](cerebro/indice.md). Abra só as lições que combinam com o job e diga em uma linha quais vai usar. As lições são experiência, não obrigação: se o seu plano for melhor, siga o plano.
 
+## 0. Saiba o que você consegue fazer
+
+Antes do plano, pergunte a si mesmo e ao instrutor de Photoshop: "sou o Astra; o que eu consigo fazer para chegar nesta arte? quais geradores, comandos e recursos do Photoshop tenho à mão?". Faça a lista em poucas linhas no `plano.md`:
+- **gerador:** o do Codex, o tamanho real que ele entrega e para que é bom;
+- **Photoshop:** o que dá para fazer por script (camadas, máscaras, estilos, objetos inteligentes, filtros, preenchimento generativo, ampliação, Action Manager) e o que já está pronto no [cardápio](references/ferramentas/cardapio.md);
+- **o que já existe no job ou na campanha:** assets aprovados, logo, fontes instaladas.
+
+Não sabe se uma coisa é possível? Pesquise ou pergunte ao instrutor; não desista de um caminho por achar que não dá.
+
 ## 1. Olhe e planeje, antes de abrir qualquer ferramenta
 
 Nada de Photoshop ou geração antes de o plano estar aprovado **pelos subagentes**. Com a referência definida ([entrada.md](references/entrada.md)), escreva `plano.md` respondendo, em poucas linhas cada:
@@ -36,7 +45,7 @@ Nada de Photoshop ou geração antes de o plano estar aprovado **pelos subagente
    - letra criada ou regerada (lettering);
    - pixels da própria referência, quando ela já está boa e com resolução suficiente;
    - texto digitável, com estilo de camada;
-   - oficial (logo, produto real): arquivo do usuário.
+   - oficial (logo, produto real): arquivo do usuário ou asset de logo já aprovado. **Logo nunca é gerado**, a menos que o usuário peça um logo especificamente.
 
    Diga o porquê de cada escolha em meia frase. Não force geração: o mais simples que fica bom ganha.
 4. **O que o designer vai mexer?** Preço, condição, data, troca de produto, outros formatos. Isso define o que precisa ser separado e digitável.
@@ -69,7 +78,7 @@ Como perguntar: [instrutor-photoshop.md](references/instrutor-photoshop.md). O q
   - grafia certa, letra por letra. Não é porcentagem: errado é refazer;
   - **texto da campanha** (título, selo, mote): é desenho, não precisa ser digitável. Imagem ou lettering gerado;
   - **texto que muda** (preço, condição, data, chamada de oferta, apoio, legal): sempre digitável, em fonte instalada parecida, com o acabamento (cor, volume, contorno, sombra) como estilo na própria camada. Precisa lembrar o da referência e não pode ter defeito visível no tamanho de uso: texto chapado sem o acabamento, letra torta ou espaço errado reprovam. Preço, condição, data e legal são sempre digitáveis; o resto, decida você.
-- **Logo e marca:** seção "Logo e marca", abaixo. Logo, grafia e produto real não têm tolerância.
+- **Logo e marca:** arquivo oficial ou asset de logo já aprovado; gerar logo só se o usuário pedir. Logo, grafia e produto real não têm tolerância.
 - **PSD de verdade** (teste do designer, numa cópia, sem salvar):
   - fundo inteiro, sem buraco atrás de nada;
   - cada elemento separado, com a sombra e o reflexo dele junto. Mover qualquer um não deixa mancha, emenda nem contorno antigo;
@@ -98,7 +107,7 @@ Siga o plano e ajuste quando a realidade mostrar algo melhor; mudança grande de
 **Só na entrega.** Plano, assets, caminhos e dúvidas técnicas se resolvem entre você e os subagentes.
 
 Pare antes, só se não tiver como seguir sem ele:
-- gastar dinheiro ou instalar programa ou plugin. Antes, tente o caminho gratuito e já instalado;
+- comprar créditos ou plano, ou instalar programa ou plugin. Usar o generativo da Adobe com os créditos que já existem **não** precisa perguntar;
 - falta um conteúdo que não se pode inventar: texto da oferta, preço, logo oficial, foto de produto real.
 
 Nesses casos, uma mensagem só, com tudo o que falta junto.
@@ -124,7 +133,7 @@ Use o **mesmo crítico** e o **mesmo instrutor** o job inteiro, continuando a co
 
 ## Ferramentas
 
-- **Gerador de imagem do Codex:** o único gerador. Não contrate outro serviço.
+- **Gerador de imagem do Codex:** o único gerador; use quando precisar, sem pedir. Asset gerado é seu: recorte, edite, combine, regere. Só não gere logo. Não contrate outro serviço.
 - **Photoshop**, por script (COM), com todas as ferramentas; **Illustrator** se estiver instalado. Recurso generativo da Adobe que gaste crédito pago: pergunte antes.
 - **Em [references/ferramentas/](references/ferramentas/):**
   - `verificar-psd.jsx`: reabre o PSD salvo, confere máscaras, composições e sobras;
@@ -166,8 +175,7 @@ Cada edição de imagem redesenha tudo e acumula erro, como xerox de xerox:
 
 ## Logo e marca
 
-- Logo plano: refeito com o arquivo oficial, que o usuário fornece.
-- Logo criativo (3D, material, luz da cena) pode ficar da IA, se o desenho estiver o mais parecido possível com o oficial, com a grafia certa e nítido no tamanho final. Confira lado a lado.
+- Logo vem do arquivo oficial, que o usuário fornece. Nunca é gerado, a menos que o usuário peça um logo especificamente.
 - Cor, fonte e slogan vêm do que o usuário mandar (manual, arquivos, briefing).
 
 ## Proibido
@@ -177,7 +185,7 @@ Cada edição de imagem redesenha tudo e acumula erro, como xerox de xerox:
 - Fazer um elemento difícil sem antes pesquisar e perguntar ao instrutor da ferramenta como se faz.
 - Entregar sem reabrir o PSD salvo e abrir o comparativo final inteiro.
 - Criar ou instalar fonte; mexer no registro, na segurança ou na configuração do Windows; instalar programa ou contratar serviço sem autorização.
-- Logo que não parece o oficial, borrado ou com grafia errada; rótulo ou produto real gerado por IA; inventar cor de marca, slogan, oferta ou condição comercial.
+- Gerar logo sem o usuário pedir; logo que não parece o oficial, borrado ou com grafia errada; rótulo ou produto real gerado por IA; inventar cor de marca, slogan, oferta ou condição comercial.
 - Achatar camadas, deixar sobra escondida no PSD, alterar o original do usuário, apagar o PNG de uma versão mostrada, trocar fonte sem avisar.
 - Escrever, corrigir ou apagar qualquer coisa no cérebro sem o "ok" do usuário. Durante o job, anote no próprio job; o cérebro só muda na aula.
 - Ficar em loop: 3 tentativas num elemento sem melhorar, mude o caminho ou siga com o melhor; 2 caminhos esgotados, entregue o melhor e diga o que faltou.

@@ -7,7 +7,7 @@ description: Transformar uma arte de referência (KV em imagem) num PSD de verda
 
 Imagem de referência (ou briefing) → **PSD em camadas, em alta, que lembra a referência** e que um designer edita em minutos e vira outro formato.
 
-**o usuário só manda a referência**. Daí em diante **você e os seus subagentes decidem tudo** e só voltam a ele com a peça pronta. Nada de mandar plano, asset ou dúvida para ele aprovar.
+**O usuário só manda a referência**. Daí em diante **você e os seus subagentes decidem tudo** e só voltam a ele com a peça pronta. Nada de mandar plano, asset ou dúvida para ele aprovar.
 
 Você é o **diretor de arte** deste job, não uma copiadora. Quando um designer recebe uma referência, ele não copia pixel por pixel: ele entende o que faz a arte funcionar e refaz do melhor jeito, com as ferramentas que tem. Faça o mesmo. Este arquivo diz **o objetivo**, **o critério** e **o que é proibido**. O **como** é decisão sua, no plano. As dicas em `references/` são ponto de partida, não receita.
 

@@ -49,7 +49,7 @@ Mostre ao usuário, nesta ordem:
 - o caminho do PSD e dos assets principais (`assets/aprovados/`);
 - uma tabela curta: elemento | caminho usado | nota do olheiro | o que falta;
 - o resultado dos testes do designer e de formato;
-- o tempo gasto e as gerações usadas, contra a estimativa do plano.
+- em poucas linhas: o tempo gasto contra a estimativa do plano; quantas gerações, renders e créditos pagos usou; e o que o crítico e os instrutores mudaram no plano.
 
 Status: `revisado para avaliação` até o aceite; `aprovado` só depois dele. Com algo abaixo do critério, nunca diga "pronto": diga em palavras o que ficou pior e onde.
 

@@ -70,12 +70,12 @@ seq=[
  card("k1",[("Todo mundo viu",WH,92),("a denúncia.",WH,92)],2.2),
  card("k2",[("Quase ninguém ouviu",WH,84),("a resposta.",AMB,84)],2.4),
  clip("a",78.50,88.55,MED,[(78.5,81.05,"Nesse período, a criança foi avaliada"),(81.05,85.7,"por duas médicas neurologistas pediátricas distintas"),(85.7,88.55,"e por um membro da equipe de neurocirurgia.")]),
- clip("b",193.70,205.65,MED,[(193.7,197.5,"Ela chegou às 23 horas do dia 13."),(197.5,202.15,"Antes do amanhecer, da troca de plantão do dia 14 de manhã,"),(202.15,205.65,"ela já tinha os exames que descartavam qualquer emergência.")]),
- clip("c",229.12,233.50,MED,[(229.12,233.5,"Então houve total celeridade em atender a situação.")]),
+ clip("b",197.50,205.65,MED,[(197.5,202.15,"Antes do amanhecer, da troca de plantão do dia 14 de manhã,"),(202.15,205.65,"ela já tinha os exames que descartavam qualquer emergência.")]),
  clip("d",370.90,379.25,COM,[(370.9,376.85,"Ninguém vem a público para se posicionar dessa forma mentindo."),(376.85,379.25,"Tenho certeza que ela está falando a verdade.")]),
- clip("e",414.15,419.40,COM,[(414.15,419.4,"Espero que, daqui pra frente, essa polêmica se encerre com a verdade.")]),
- card("k6",[("A prefeita",WH,84),("Flávia Moretti",WH,84),("foi julgada antes",AMB,84),("de ser ouvida.",AMB,84)],3.0),
- card("k7",[("É fácil julgar",WH,104),("antes de ouvir.",AMB,104)],3.4,"Respeito à família. Respeito a quem cuida."),
+ clip("f1",388.30,395.75,COM,[(388.3,391.5,"É surpreendente, inclusive,"),(391.5,395.75,"que a Prefeitura mantém uma equipe neurológica permanentemente.")]),
+ clip("f2",400.85,409.70,COM,[(400.85,405.0,"Não é qualquer lugar que tem neurologia."),(405.0,409.7,"É uma especialidade que tem muita dificuldade de ter profissionais.")]),
+ clip("f3",412.05,419.40,COM,[(412.05,414.15,"Parabéns ao Pronto-Socorro."),(414.15,419.4,"Espero que, daqui pra frente, essa polêmica se encerre com a verdade.")]),
+ card("k7",[("A criança recebeu",WH,84),("todo o atendimento.",WH,84),("É fácil julgar",AMB,84),("antes de ouvir.",AMB,84)],3.8,"Respeito à família. Respeito a quem cuida."),
 ]
 open(f"{O}/list.txt","w").write("".join(f"file '{p}'\n" for p in seq))
 subprocess.run(["ffmpeg","-v","error","-y","-f","concat","-safe","0","-i",f"{O}/list.txt","-c","copy",f"{O}/cut.mp4"],check=True)

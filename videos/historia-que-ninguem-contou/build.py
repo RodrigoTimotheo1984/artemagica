@@ -74,7 +74,7 @@ seq=[
  clip("d",370.90,379.25,COM,[(370.9,376.85,"Ninguém vem a público para se posicionar dessa forma mentindo."),(376.85,379.25,"Tenho certeza que ela está falando a verdade.")]),
  clip("f1",388.30,395.75,COM,[(388.3,391.5,"É surpreendente, inclusive,"),(391.5,395.75,"que a Prefeitura mantém uma equipe neurológica permanentemente.")]),
  clip("f2",400.85,409.70,COM,[(400.85,405.0,"Não é qualquer lugar que tem neurologia."),(405.0,409.7,"É uma especialidade que tem muita dificuldade de ter profissionais.")]),
- clip("f3",412.05,419.40,COM,[(412.05,414.15,"Parabéns ao Pronto-Socorro."),(414.15,419.4,"Espero que, daqui pra frente, essa polêmica se encerre com a verdade.")]),
+ clip("f3",412.05,419.95,COM,[(412.05,414.15,"Parabéns ao Pronto-Socorro."),(414.15,419.95,"Espero que, daqui pra frente, essa polêmica se encerre com a verdade.")]),
  card("k7",[("A criança recebeu",WH,84),("todo o atendimento.",WH,84),("É fácil julgar",AMB,84),("antes de ouvir.",AMB,84)],3.8,"Respeito à família. Respeito a quem cuida."),
 ]
 open(f"{O}/list.txt","w").write("".join(f"file '{p}'\n" for p in seq))

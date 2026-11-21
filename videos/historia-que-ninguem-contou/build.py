@@ -40,7 +40,7 @@ def card(name,lines,dur,small=None,img=None,fadein=True):
     p=f"{O}/{name}.png"; im.save(p)
     out=f"{O}/{name}.mp4"
     fi="fade=in:st=0:d=0.35," if fadein else ""
-    subprocess.run(["ffmpeg","-v","error","-y","-loop","1","-t",str(dur),"-i",p,"-f","lavfi","-t",str(dur),"-i","anullsrc=r=48000:cl=stereo",
+    subprocess.run(["ffmpeg","-v","error","-y","-loop","1","-framerate","30","-t",str(dur),"-i",p,"-f","lavfi","-t",str(dur),"-i","anullsrc=r=48000:cl=stereo",
       "-vf",f"zoompan=z='1+0.03*on/({dur}*30)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps=30,{fi}fade=out:st={dur-0.25}:d=0.25,format=yuv420p",
       "-c:v","libx264","-preset","medium","-crf","18","-r","30","-c:a","aac","-b:a","160k","-ar","48000","-shortest",out],check=True)
     return out
